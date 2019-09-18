@@ -1,0 +1,48 @@
+{
+  "name": "napd-fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "unit": "tap test/**/*.test.js",
+    "test": "npm run lint && npm run unit",
+    "start": "node src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore",
+    "lint-fix": "eslint ./ --cache --fix --ignore-pattern .gitignore"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@sentry/node": "^5.6.1",
+    "dotenv": "^8.0.0",
+    "fastify": "^2.0.0",
+    "fastify-autoload": "^0.8.0",
+    "fastify-formbody": "^3.1.0",
+    "fastify-helmet": "^3.0.0",
+    "fastify-plugin": "^1.5.0",
+    "fastify-swagger": "^2.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.19.1",
+    "pg": "^7.11.0"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.19.1",
+    "pre-commit": "^1.2.2",
+    "simple-get": "^3.0.3",
+    "standard": "^12.0.1",
+    "tap": "^12.5.3"
+  },
+  "pre-commit": [
+    "test"
+  ]
+}
